@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magic Mirror | Virtual Mathematics Lab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="floating-hearts"></div>
+  <audio id="ambientMusic" loop>
+    <source src="assets/barbie-ambient.mp3" type="audio/mpeg">
+</audio>
+<audio id="victorySound" preload="auto" loop>
+    <source src="assets/victory.mp3" type="audio/mpeg">
+</audio>
+<header>
+  <div class="brand">
+    <div class="brand-icon">
+    <span>🪞</span>
+</div>
+    <div>
+      <div class="brand-name">𝐌𝐀𝐆𝐈𝐂 𝐌𝐈𝐑𝐑𝐎𝐑</div>
+      <div class="brand-sub">VIRTUAL MATHEMATICS LABORATORY</div>
+    </div>
+  </div>
+  <div class="header-actions">
+  <span class="phase">The Transformation Chamber</span>
+    <button id="musicBtn" class="softbtn">♪ MUSIC OFF</button>
+    <button id="soundBtn" class="softbtn">♫ ON</button>
+    <button id="resetBtn" class="softbtn">↻ Reset</button>
+  </div>
+</header>
+
+<nav id="tabs">
+  <button class="tab active" data-tab="home">⌂ Daftar Isi</button>
+  <button class="tab" data-tab="cp">ᯓ CP &amp; TP</button>
+  <button class="tab" data-tab="theory">⫶☰ Teori</button>
+  <button class="tab" data-tab="procedure">☷ Prosedur</button>
+  <button class="tab" data-tab="simulation">✿ Simulasi</button>
+  <button class="tab" data-tab="examples">✎ Contoh Soal</button>
+  <button class="tab" data-tab="quiz">★ Latihan</button>
+</nav>
+
+<main>
+<section class="panel active" id="p-home">
+ <div class="home-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;height:100%">
+  <div style="display:flex;flex-direction:column;justify-content:center;gap:14px;padding:clamp(8px,2vw,26px)">
+   <div class="medium" style="font-weight:900;letter-spacing:2px;color:var(--pink)">WELCOME, YOUNG MATHEMATICIAN ✧</div>
+   <div style="font-size:clamp(30px,4.5vw,58px);font-weight:950;line-height:0.80">ᴅɪꜱᴄᴏᴠᴇʀ ᴛʜᴇ<br><span style="color:var(--pink)">ᴍᴀɢɪᴄ ᴏꜰ</span><br>ʀᴇꜰʟᴇᴄᴛɪᴏɴ ୨ৎ</div>
+   <p style="font-size:clamp(12px,1.3vw,15px);line-height:1.7;max-width:480px">Selamat datang di Magic Mirror. Jelajahi bagaimana grafik fungsi kuadrat berubah ketika dicerminkan terhadap sumbu koordinat.</p>
+   <button class="pinkbtn" style="align-self:flex-start" data-go="cp">Mulai Eksperimen →</button>
+   <div class="small">Matematika Refleksi Fungsi Kuadrat</div>
+  </div>
+  <div class="glass" style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;padding:18px">
+   <div style="font-size:clamp(44px,7vw,80px)">🪞</div>
+   <div style="font-size:clamp(16px,2vw,22px);font-weight:950">✦ 𝒯𝐻𝐸 𝑀𝐼𝑅𝑅𝒪𝑅 𝒞𝐻𝒜𝑀𝐵𝐸𝑅 ✦</div>
+   <div class="small" style="text-align:center">“Every reflection tells a different story.”</div>
+   <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;width:100%">
+    <div class="card" style="text-align:center"><div style="font-size:24px">↕</div><b style="font-size:12px">Refleksi sumbu X</b></div>
+    <div class="card" style="text-align:center"><div style="font-size:24px">↔</div><b style="font-size:12px">Refleksi sumbu Y</b></div>
+   </div>
+   <div class="small" style="font-weight:900;color:var(--pink)">LEARN · EXPLORE · REFLECT</div>
+  </div>
+ </div>
+</section>
+
+<section class="panel" id="p-cp">
+ <div class="heading">ᯓ★ Capaian dan Tujuan Pembelajaran</div>
+ <div style="display:flex;flex-direction:column;gap:20px;flex:1;min-height:0">
+  <div class="card">
+   <b>🎓 Capaian Pembelajaran</b>
+   <p style="font-size:13px;line-height:1.7">Peserta didik mampu melakukan transformasi fungsi dan menginterpretasikan perubahan grafik fungsi, termasuk fungsi kuadrat, melalui representasi aljabar dan visual.</p>
+   <div class="small">Fase F · Elemen Aljabar dan Fungsi</div>
+  </div>
+  <div class="card">
+   <b>🎯 Tujuan Pembelajaran</b>
+   <ol style="font-size:13px;line-height:1.9;padding-left:20px">
+    <li>Menjelaskan konsep refleksi pada fungsi kuadrat.</li>
+    <li>Membedakan refleksi terhadap sumbu X dan sumbu Y.</li>
+    <li>Menentukan persamaan hasil refleksi fungsi kuadrat.</li>
+    <li>Menganalisis perubahan grafik melalui simulasi.</li>
+    <li>Menyelesaikan soal refleksi fungsi kuadrat dengan tepat.</li>
+   </ol>
+  </div>
+ </div>
+</section>
+
+<section class="panel" id="p-theory">
+ <div class="heading">⫶☰ Theory Room</div>
+ <div class="scrollarea" style="flex:1;display:flex;flex-direction:column;gap:9px;padding-right:4px">
+  <div class="card">
+   <b>1. Apa itu refleksi?</b>
+   <p style="font-size:13px">Refleksi adalah transformasi yang mencerminkan objek terhadap garis tertentu. Bentuk dan ukuran tetap, tetapi posisinya berubah.</p>
+  </div>
+  <div class="card">
+   <b>2. Bentuk umum fungsi kuadrat</b>
+   <div style="text-align:center;font-size:22px;font-weight:900;color:var(--pink);padding:10px">f(x) = ax² + bx + c</div>
+   <p style="font-size:13px">Dengan a ≠ 0. Grafiknya berbentuk parabola.</p>
+  </div>
+  <div class="card">
+   <b>3. Refleksi terhadap sumbu X</b>
+   <div style="text-align:center;font-size:21px;font-weight:900;color:var(--pink);padding:8px">g(x) = −f(x)</div>
+   <p style="font-size:13px">Semua nilai y berubah tanda. Grafik yang terbuka ke atas menjadi ke bawah, atau sebaliknya.</p>
+   <p style="font-size:13px;font-weight:700">Contoh: f(x) = x² → g(x) = −x²</p>
+  </div>
+  <div class="card">
+   <b>4. Refleksi terhadap sumbu Y</b>
+   <div style="text-align:center;font-size:21px;font-weight:900;color:var(--pink);padding:8px">g(x) = f(−x)</div>
+   <p style="font-size:13px">Semua x diganti dengan −x. Grafik dicerminkan secara horizontal.</p>
+   <p style="font-size:13px;font-weight:700">Contoh: f(x) = x² + 2x + 1 → g(x) = x² − 2x + 1</p>
+  </div>
+  <div class="card">
+   <b>5. Ringkasan penting</b>
+   <p style="font-size:13px;line-height:1.8">Refleksi X: (x,y) → (x,−y).<br>Refleksi Y: (x,y) → (−x,y).<br>Refleksi tidak mengubah bentuk parabola, tetapi mengubah orientasi atau posisinya.</p>
+  </div>
+ </div>
+</section>
+
+<section class="panel" id="p-procedure">
+ <div class="heading">☷ Prosedur Eksperimen</div>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;min-height:0">
+  <div class="card scrollarea">
+   <b>🔬 Alat dan bahan virtual</b>
+   <p style="font-size:13px;line-height:1.8">• Perangkat komputer atau smartphone<br>• Simulasi grafik Magic Mirror<br>• Alat tulis dan kalkulator</p>
+   <b>🧪 Langkah kerja</b>
+   <ol style="font-size:13px;line-height:1.8;padding-left:20px">
+    <li>Buka menu Simulasi.</li>
+    <li>Masukkan koefisien a, b, dan c.</li>
+    <li>Amati grafik fungsi awal.</li>
+    <li>Pilih refleksi sumbu X atau Y.</li>
+    <li>Bandingkan grafik awal dan hasil refleksi.</li>
+    <li>Catat perubahan persamaan dan titik puncaknya.</li>
+   </ol>
+  </div>
+  <div class="card" style="display:flex;flex-direction:column;justify-content:center;gap:12px">
+   <div style="font-size:38px;text-align:center">🧫</div>
+   <b style="text-align:center">Pertanyaan Pengamatan</b>
+   <p style="font-size:13px">1. Apa yang terjadi pada grafik setelah direfleksikan terhadap sumbu X?</p>
+   <p style="font-size:13px">2. Mengapa refleksi sumbu Y mengubah tanda koefisien b?</p>
+   <p style="font-size:13px">3. Apakah titik puncak berubah setelah refleksi?</p>
+   <div class="small">Catat jawabanmu untuk bahan diskusi.</div>
+   <button class="pinkbtn" data-go="simulation">Buka Simulasi →</button>
+  </div>
+ </div>
+</section>
+
+<section class="panel" id="p-simulation">
+ <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:9px">
+  <div class="heading" style="margin:0">✿ Mirror Simulator</div>
+  <button class="softbtn" id="simReset">Reset Grafik ↻</button>
+ </div>
+ <div class="sim-grid" style="display:grid;grid-template-columns:minmax(0,1.7fr) minmax(190px,.8fr);gap:12px;flex:1;min-height:0">
+  <div class="glass graph-container" id="graphContainer"
+     style="position:relative;min-height:0;overflow:hidden">
+
+   <canvas id="graph"
+       style="width:100%;height:100%;display:block">
+   </canvas>
+
+   <!-- GRAPH CONTROLS -->
+   <div class="graph-controls">
+      <button id="zoomOut" type="button">−</button>
+      <span id="zoomLevel">100%</span>
+      <button id="zoomIn" type="button">+</button>
+      <button id="resetZoom" type="button">↺</button>
+      <button id="fullscreenGraph" type="button">⛶</button>
+   </div>
+   <div style="position:absolute;top:9px;left:12px;font-size:10px;font-weight:900;color:#b16b89">GRAPH VISUALIZER</div>
+   <div style="position:absolute;bottom:9px;left:12px;font-size:10px">● Original &nbsp; <span style="color:var(--purple)">●</span> Reflected</div>
+  </div>
+  <div class="card scrollarea" style="display:flex;flex-direction:column;gap:9px">
+   <b style="font-size:13px">⚙️ Atur fungsi kuadrat</b>
+   <div class="formula simulator-formula">
+    f(x) = ax² + bx + c
+</div>
+   <label style="display:flex;align-items:center;justify-content:space-between;font-size:12px">a <input class="input" id="a" type="number" step=".5" value="1"></label>
+   <label style="display:flex;align-items:center;justify-content:space-between;font-size:12px">b <input class="input" id="b" type="number" step=".5" value="0"></label>
+   <label style="display:flex;align-items:center;justify-content:space-between;font-size:12px">c <input class="input" id="c" type="number" step=".5" value="0"></label>
+   <div class="small">Pilih jenis refleksi:</div>
+   <button class="pinkbtn" id="reflectX">↕ Refleksi sumbu X</button>
+   <button class="softbtn" id="reflectY">↔ Refleksi sumbu Y</button>
+   <div class="card">
+    <div class="small">Persamaan awal</div>
+    <div id="original" style="font-weight:800;font-size:13px;margin-top:3px">f(x) = x²</div>
+    <div class="small" style="margin-top:10px">Hasil refleksi</div>
+    <div id="result" style="font-weight:800;font-size:13px;color:var(--pink);margin-top:3px">Belum dicerminkan</div>
+   </div>
+   <div id="explain" style="font-size:11px;line-height:1.6">Pilih refleksi untuk melihat perubahan grafik.</div>
+   <button class="softbtn" id="clearReflection">Hapus refleksi</button>
+  </div>
+ </div>
+</section>
+
+<section class="panel" id="p-examples">
+ <div class="heading">✎ Contoh Soal &amp; Pembahasan</div>
+ <div style="display:flex;justify-content:space-between;align-items:center">
+  <span class="small" id="exampleCount">Soal 1 dari 3</span>
+  <span class="small">Baca dan pahami langkahnya</span>
+ </div>
+ <div class="card" id="exampleCard" style="flex:1;min-height:0;margin-top:9px;display:flex;flex-direction:column;justify-content:center;gap:14px;overflow:auto"></div>
+ <div style="display:flex;justify-content:space-between;margin-top:9px">
+  <button class="navbtn" id="prevEx">← Sebelumnya</button>
+  <button class="pinkbtn" id="nextEx">Selanjutnya →</button>
+ </div>
+</section>
+
+<section class="panel" id="p-quiz">
+ <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:9px">
+  <div class="heading" style="margin:0">★ Magic Challenge</div>
+  <div class="small" id="progress">1 / 5</div>
+ </div>
+ <div style="height:6px;border-radius:8px;overflow:hidden;background:#f0cfdd;margin-bottom:12px">
+  <div id="progressBar" style="height:100%;width:20%;background:var(--pink);transition:width .3s"></div>
+ </div>
+ <div class="card scrollarea" id="quizCard" style="flex:1;display:flex;flex-direction:column;gap:13px;min-height:0"></div>
+ <div style="display:flex;gap:7px;margin-top:9px">
+  <button class="softbtn" id="prevQ">← Kembali</button>
+  <button class="pinkbtn" style="flex:1" id="checkQ">Periksa Jawaban</button>
+  <button class="softbtn" id="nextQ">Lanjut →</button>
+ </div>
+ <div id="quizResult" style="font-size:11px;text-align:center;font-weight:800;margin-top:5px;min-height:14px"></div>
+</section>
+</main>
+
+<footer>
+ <span>🪞 MAGIC MIRROR · LEARN WITH REFLECTION</span>
+ <span>MATHEMATICS · LEARNING MODULE</span>
+</footer>
+</div>
+<script src="script.js" defer></script>
+<!-- VICTORY VIDEO POPUP -->
+<div id="victoryOverlay" class="victory-overlay">
+    <div class="victory-video-box">
+
+        <button id="closeVictory" class="close-victory">
+            ✕
+        </button>
+
+        <video id="victoryVideo" controls playsinline muted loop>
+            <source src="assets/victorycat.webm" type="video/webm">
+            Browser kamu tidak mendukung video.
+        </video>
+
+    </div>
+</div>
+</body>
+</html>

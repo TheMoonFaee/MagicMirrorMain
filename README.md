@@ -1,0 +1,2 @@
+# MagicMirrorMain
+Refleksi Fungsi Kuadrat
